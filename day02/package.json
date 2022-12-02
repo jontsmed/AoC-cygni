@@ -1,0 +1,13 @@
+{
+  "name": "bun-test",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "part1": "part=part1 bun index.ts",
+    "part2": "part=part2 bun index.ts",
+    "test": "bun wiptest"
+  },
+  "devDependencies": {
+    "bun-types": "^0.2.0"
+  }
+}
