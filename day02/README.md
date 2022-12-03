@@ -1,4 +1,4 @@
-## Day 1 solution template
+## Day 2 solution template
 
 This shows the basics of the setup needed to participate in the Cygnified AoC with your solution for a given day (in this case day 2 because we are in the `day02` directory). **The directory structure is important.**
 
