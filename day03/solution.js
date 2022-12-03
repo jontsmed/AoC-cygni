@@ -1,5 +1,5 @@
 import { file } from "bun";
-const input = (await file("input.txt").text()).split("\n");
+const input = (await file("input.txt").text()).trim().split("\n");
 const getItemPriority = (item) => {
   const charCode = item.charCodeAt(0);
   if (charCode < 97) return charCode - 38;
@@ -55,4 +55,5 @@ const getPartTwoSolution = () => {
     }, 0)
   );
 };
+getPartOneSolution();
 process.env.part == "part1" ? getPartOneSolution() : getPartTwoSolution();
