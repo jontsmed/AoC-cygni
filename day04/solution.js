@@ -1,8 +1,5 @@
-const input = require("fs")
-  .readFileSync("input.txt")
-  .toString()
-  .trim()
-  .split("\n");
+import { file } from "bun";
+const input = (await file("input.txt").text()).trim().split("\n");
 
 const getPartOneSolution = () => {
   console.log(

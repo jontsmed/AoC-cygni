@@ -1,5 +1,14 @@
-FROM node:17-slim
-COPY . .
-RUN yarn install
+FROM debian:stable-slim
+RUN apt-get update
+RUN apt-get install -y curl unzip
+RUN curl https://bun.sh/install | bash
+ENV PATH="/root/.bun/bin:${PATH}"
 
-CMD node solution.js
+# COPY package.json bun.lockb ./
+# RUN  bun install
+
+COPY solution.js .
+# COPY tsconfig.json .
+COPY input.txt .
+
+CMD bun solution.js
